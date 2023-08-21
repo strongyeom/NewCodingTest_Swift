@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' buildActiveScheme='true' importAppTypes='true'>
+    <pages>
+        <page name='Untitled Page'/>
+        <page name='프로그래머스 LV1. 약수의 합'/>
+        <page name='자릿수 더하기'/>
+        <page name='짝수와 홀수'/>
+        <page name='평균 구하기'/>
+    </pages>
+</playground>
