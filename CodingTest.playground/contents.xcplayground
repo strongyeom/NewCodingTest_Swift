@@ -5,6 +5,7 @@
         <page name='프로그래머스 LV1. 약수의 합'/>
         <page name='자릿수 더하기'/>
         <page name='짝수와 홀수'/>
-        <page name='평균 구하기'/>
+        <page name='평균 구하기'/>
+        <page name='나머지가 1이 되는 수 찾기'/>
     </pages>
 </playground>
