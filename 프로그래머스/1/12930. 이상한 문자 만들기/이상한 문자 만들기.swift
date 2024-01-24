@@ -15,9 +15,7 @@ func solution(_ s:String) -> String {
         }
         
         for k in 0..<aa.count {
-            if k == 0 {
-                value += String(aa[k]).uppercased()
-            } else if k % 2 == 0 {
+            if k % 2 == 0 {
                 value += String(aa[k]).uppercased()
             } else {
                 value += String(aa[k]).lowercased()
