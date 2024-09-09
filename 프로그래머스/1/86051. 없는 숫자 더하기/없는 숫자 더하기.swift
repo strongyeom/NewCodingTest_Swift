@@ -2,10 +2,8 @@ import Foundation
 
 func solution(_ numbers:[Int]) -> Int {
     
-    let total = 45
-   
-    let sum = numbers.reduce(0) { $0 + $1 }
-    
-    
-    return total - sum
+   let total = (0...9).map { $0 }.reduce(0) { $0 + $1 }
+    let value = numbers.map { $0 }.reduce(0) { $0 + $1 }
+    let result = total - value
+    return result
 }
