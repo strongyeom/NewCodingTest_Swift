@@ -1,11 +1,7 @@
 func solution(_ seoul:[String]) -> String {
-var findKimIndex: Int = 0
     
-    for (index, element) in seoul.enumerated() {
-        if element == "Kim" {
-            findKimIndex = index
-        }
+    guard let index = seoul.firstIndex(of: "Kim")  else {
+        return ""
     }
-    
-    return "김서방은 \(findKimIndex)에 있다"
+    return "김서방은 \(index)에 있다"
 }
