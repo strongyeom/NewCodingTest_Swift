@@ -1,15 +1,10 @@
 func solution(_ s:String) -> String {
     
-    let stringToArray = s.map { String($0) }
-    var result: String = ""
-    var index = stringToArray.count / 2
+    let arrayS = s.map { String($0) }
     
-    if stringToArray.count % 2 == 0 {
-        
-        result = stringToArray[index - 1 ] + stringToArray[index]
+    if s.count % 2 == 0 {
+        return arrayS[s.count/2 - 1] + arrayS[s.count/2]
     } else {
-        result = stringToArray[index]
+        return arrayS[s.count/2]
     }
-    
-    return result
 }
