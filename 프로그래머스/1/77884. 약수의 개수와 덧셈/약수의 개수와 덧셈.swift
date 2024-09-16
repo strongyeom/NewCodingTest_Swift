@@ -5,16 +5,12 @@ func solution(_ left:Int, _ right:Int) -> Int {
     var result: Int = 0
     
     for i in left...right {
+        var count: Int = 0
+        var sqrtNum = Int(Double(i).squareRoot())
         
-        var count = 0
-        
-        let sqrtValue = Int(sqrt(Double(i)))
-        
-        for j in (1...sqrtValue) {
-            
+        for j in 1...sqrtNum {
             if i % j == 0 {
                 count += 1
-                
                 if j != i / j {
                     count += 1
                 }
@@ -26,6 +22,7 @@ func solution(_ left:Int, _ right:Int) -> Int {
         } else {
             result -= i
         }
+        
     }
     
     return result
