@@ -1,4 +1,4 @@
 func solution(_ s:String) -> String {
-    
-    return s.map { String($0) }.sorted(by: >).joined()
+    let result = s.sorted(by: >).map { String($0) }.joined()
+    return result
 }
