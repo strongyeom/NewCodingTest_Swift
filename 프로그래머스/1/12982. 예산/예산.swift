@@ -1,18 +1,20 @@
 import Foundation
 
 func solution(_ d:[Int], _ budget:Int) -> Int {
- 
-    // [ 1, 2, 3, 4, 5]
     
-    var sum = 0
-    var count = 0
-    for i in d.sorted() {
-        sum += i
-       
-        if sum > budget {
+    let sortD = d.sorted(by: <)
+    
+    var total = budget
+    var count: Int = 0
+    
+    for i in sortD {
+        total -= i
+        if total >= 0 {
+            count += 1
+        } else {
             break
         }
-        count += 1
     }
+    
     return count
 }
