@@ -2,25 +2,17 @@ func solution(_ s:String) -> String {
     
     let separated = s.components(separatedBy: " ")
     var doubleArray: [String] = []
+    
     for i in separated {
-        var array: [String] = []
-        for j in i {
-            array.append(String(j))
-        }
-        
-        for z in 0..<array.count {
-            if (z+1) % 2 != 0 {
-                array[z] = array[z].uppercased()
+        var array: String = ""
+        for (index, value) in i.enumerated() {
+            if (index + 1) % 2 != 0 {
+                array += value.uppercased()
             } else {
-                array[z] = array[z].lowercased()
-            }
-            
-            if z == 0 {
-                array[z] = array[z].uppercased()
+                array += value.lowercased()
             }
         }
-        let joinString = array.joined()
-        doubleArray.append(joinString)
+        doubleArray.append(array)
     }
 
     return doubleArray.joined(separator: " ")
