@@ -1,28 +1,27 @@
 func solution(_ s:String) -> String {
-    // 단어별로 짝 / 홀
-    // 0번째 인덱스는 짝수  ==> 단어의 홀수번째 인덱스가 대문자, 짝수번째 소문자
     
-    let componentsArray = s.components(separatedBy: " ")
+    let separated = s.components(separatedBy: " ")
     var doubleArray: [String] = []
-    
-    print(componentsArray)
-    for i in componentsArray {
-        var value: String = ""
-        var aa: [String] = []
+    for i in separated {
+        var array: [String] = []
         for j in i {
-            
-            aa.append(String(j))
+            array.append(String(j))
         }
         
-        for k in 0..<aa.count {
-            if k % 2 == 0 {
-                value += String(aa[k]).uppercased()
+        for z in 0..<array.count {
+            if (z+1) % 2 != 0 {
+                array[z] = array[z].uppercased()
             } else {
-                value += String(aa[k]).lowercased()
+                array[z] = array[z].lowercased()
+            }
+            
+            if z == 0 {
+                array[z] = array[z].uppercased()
             }
         }
-        
-        doubleArray.append(value)
+        let joinString = array.joined()
+        doubleArray.append(joinString)
     }
+
     return doubleArray.joined(separator: " ")
 }
